@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5_form</title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1><br>
+        <form action="https://ycce.edu">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+                <input type="radio" id="other" name="gender" value="other"> Other<br>
+                <label for="regno">Registration Number:</label><br>
+                <input type="number" id="regno" name="regno" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Academics Details</legend>
+                <label for="branch">Choose your branch:</label><br>
+                <select id="branch" name="branch" size="6"><br>
+                <option value="cse">CSE</option>
+                <option value="ctech">C.Tech</option>
+                <option value="electronic">Electronic</option>
+                <option value="electrical">Electrical</option>
+                <option value="mechanical">Mechanical</option>
+                <option value="civil">Civil</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Submit"><br>
+            <input type="reset" value="Reset"><br>
+            <button type="button" onclick="alert('Registration successful!')">Click Me!</button><br>
+        </form>
+    </body>
+</html>
