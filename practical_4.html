@@ -22,19 +22,20 @@
 </head>
 <body>
     <h1>Student Records</h1>
-    <script>
+    <script language="javascript">
+        var student1={"name":"Yashika Rathore","regno":"26","course":"Computer Technology","marks":"95"};
         document.write("<div class='student'>");
-        document.write("<h3>Student 1: Yashika Rathore</h3>");
-        document.write("<p>Roll No: 26</p>");
-        document.write("<p>Course: Computer Technology</p>");
-        document.write("<p>Marks: 95</p>");
+        document.write("<h3>Student name: "+student1.name+"</h3>");
+        document.write("<p>Registration No: "+student1.regno+"</p>");
+        document.write("<p>Course: "+student1.course+"</p>");
+        document.write("<p>Marks: "+student1.marks+"</p>");
         document.write("</div>");
-
+        var student2={"name":"Shiwangi Rathore","regno":"101","course":"Electronics and Telecommunication","marks":"97"};
         document.write("<div class='student'>");
-        document.write("<h3>Student 2: Shiwangi Rathore</h3>");
-        document.write("<p>Roll No: 101</p>");
-        document.write("<p>Course: Electronics and Telecommunication</p>");
-        document.write("<p>Marks: 97</p>");
+        document.write("<h3>Student name: "+student2.name+"</h3>");
+        document.write("<p>Registration No: "+student2.regno+"</p>");
+        document.write("<p>Course: "+student2.course+"</p>");
+        document.write("<p>Marks: "+student2.marks+"</p>");
         document.write("</div>");
     </script>
 </body>
