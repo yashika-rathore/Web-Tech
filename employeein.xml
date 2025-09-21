@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE employees [
+<!ELEMENT employees (employee+)>
+<!ELEMENT employee (id, name, department, designation, email, salary)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+]>
+<employees>
+<employee>
+<id>101</id>
+<name>Yashika Rathore</name>
+<department>Computer Technology</department>
+<designation>Software Engineer</designation>
+<email>yashika_rathore@example.com</email>
+<salary>100000</salary>
+</employee>
+<employee>
+<id>102</id>
+<name>Shiwangi Rathore</name>
+<department>HR</department>
+<designation>HR Manager</designation>
+<email>shiwangi_rathore@example.com</email>
+<salary>150000</salary>
+</employee>
+<employee>
+<id>103</id>
+<name>Sarojni Rathore</name>
+<department>Finance</department>
+<designation>Finance Manager</designation>
+<email>sarojni_rathore@example.com</email>
+<salary>150000</salary>
+</employee>
+<employee>
+<id>104</id>
+<name>Ghanshyam Prasad Rathore</name>
+<department>Company</department>
+<designation>CEO</designation>
+<email>gprathore@example.com</email>
+<salary>500000</salary>
+</employee>
+</employees>

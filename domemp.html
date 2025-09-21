@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Information</title>
+</head>
+<body>
+    <h1>Employee Information</h1>
+    <button onclick="getSecondEmployee()">Get Second Employee's Info</button>
+    
+    <h2>Second Employee's Data:</h2>
+    <div id="second-employee-info"></div>
+
+    <script>
+        function loadXML() {
+            return fetch('employeein.xml')
+                .then(response => response.text())
+                .then(str => {
+                    const parser = new DOMParser();
+                    return parser.parseFromString(str, "application/xml");
+                });
+        }
+
+        // Function to get the second employee's data
+        function getSecondEmployee() {
+            loadXML().then(xmlDoc => {
+                const employees = xmlDoc.getElementsByTagName("employee");
+
+                if (employees.length >= 2) {
+                    const second = employees[1]; // Index 1 = second employee
+                    const id = second.getElementsByTagName("id")[0].textContent;
+                    const name = second.getElementsByTagName("name")[0].textContent;
+                    const department = second.getElementsByTagName("department")[0].textContent;
+                    const designation = second.getElementsByTagName("designation")[0].textContent;
+                    const email = second.getElementsByTagName("email")[0].textContent;
+                    const salary = second.getElementsByTagName("salary")[0].textContent;
+
+                    document.getElementById("second-employee-info").innerHTML =
+                        "<p><b>ID:</b> " + id + "</p>" +
+                        "<p><b>Name:</b> " + name + "</p>" +
+                        "<p><b>Department:</b> " + department + "</p>" +
+                        "<p><b>Designation:</b> " + designation + "</p>" +
+                        "<p><b>Email:</b> " + email + "</p>" +
+                        "<p><b>Salary:</b> " + salary + "</p>";
+                } else {
+                    alert("There are less than 2 employees in the data.");
+                }
+            }).catch(err => {
+                console.error("Error loading XML file:", err);
+            });
+        }
+    </script>
+</body>
+</html>

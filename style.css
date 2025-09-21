@@ -1,0 +1,22 @@
+employees {
+    display: block;
+    font-family: Arial;
+    background-color:lightblue;
+    padding: 10px;
+}
+employee {
+    display: block;
+    border: 1px solid gray;
+    margin: 8px;
+    padding: 8px;
+    background-color:mediumblue;
+}
+id, name, department, designation, email, salary {
+    display: block;
+    margin: 2px 0;
+}
+name {
+    font-weight: bold;
+    font-size: 14px;
+    color:black;
+}

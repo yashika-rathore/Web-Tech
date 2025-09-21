@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<?xml-stylesheet type="text/css" href="style.css"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>Yashika Rathore</name>
+        <department>HR</department>
+        <designation>Manager</designation>
+        <email>yashika_rathore@example.com</email>
+        <salary>100000</salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Shiwangi Rathore</name>
+        <department>IT</department>
+        <designation>Developer</designation>
+        <email>shiwangi_rathore@example.com</email>
+        <salary>70000</salary>
+    </employee>
+</employees>
