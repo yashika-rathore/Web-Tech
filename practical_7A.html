@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part A - Calculator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      text-align: center;
+      padding: 40px;
+    }
+    .calculator {
+      background: #fff;
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0984e3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #74b9ff;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #2d3436;
+      background: #dfe6e9;
+      border-radius: 8px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Arithmetic Calculator</h1>
+  <div class="calculator">
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number"><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">−</button>
+    <button onclick="calculate('*')">×</button>
+    <button onclick="calculate('/')">÷</button>
+    <button onclick="resetCalc()">C</button>
+    <div id="result"><b>Result:</b> -</div>
+  </div>
+  <script>
+    function calculate(op) {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers!");
+        return;
+      }
+      let result, operation;
+      switch (op) {
+        case '+':
+          result = num1 + num2;
+          operation = "Addition";
+          break;
+        case '-':
+          result = num1 - num2;
+          operation = "Subtraction";
+          break;
+        case '*':
+          result = num1 * num2;
+          operation = "Multiplication";
+          break;
+        case '/':
+          result = num2 !== 0 ? (num1 / num2).toFixed(2) : 'Infinity';
+          operation = "Division";
+          break;
+      }
+      document.getElementById("result").innerHTML = `<b>${operation} Result:</b> ${result}`;
+    }
+    function resetCalc() {
+      document.getElementById("num1").value = "";
+      document.getElementById("num2").value = "";
+      document.getElementById("result").innerHTML = "<b>Result:</b> -";
+    }
+  </script>
+</body>
+</html>
