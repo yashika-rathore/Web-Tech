@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <cd>
+    <title>Paaro</title>
+    <artist>Hardy Sandhu</artist>
+    <country>India</country>
+    <company>Spotify</company>
+    <price>₹25</price>
+    <year>2014</year>
+  </cd>
+
+  <cd>
+    <title>Baarish</title>
+    <artist>Aash King, Shashaa Tirupati</artist>
+    <country>India</country>
+    <company>Spotify</company>
+    <price>₹30</price>
+    <year>2017</year>
+  </cd>
+
+  <cd>
+    <title>Saibo</title>
+    <artist>Shreya Ghoshal, Tochi Raina</artist>
+    <country>India</country>
+    <company>Sony Music</company>
+    <price>₹20</price>
+    <year>2011</year>
+  </cd>
+
+  <cd>
+    <title>Sahiba</title>
+    <artist>Romy, Pawni Pandey</artist>
+    <country>India</country>
+    <company>Zee Music</company>
+    <price>₹28</price>
+    <year>2017</year>
+  </cd>
+
+  <cd>
+    <title>Ishq De Fanniyar</title>
+    <artist>Neha Kakkar</artist>
+    <country>India</country>
+    <company>T-Series</company>
+    <price>₹35</price>
+    <year>2018</year>
+  </cd>
+
+  <cd>
+    <title>Jeene Laga Hoon</title>
+    <artist>Atif Aslam, Shreya Ghoshal</artist>
+    <country>India</country>
+    <company>T-Series</company>
+    <price>₹32</price>
+    <year>2013</year>
+  </cd>
+</catalog>
