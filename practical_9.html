@@ -1,0 +1,102 @@
+//Write JavaScript to validate the following fields of the admission Registration page.
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5_form</title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1><br>
+        <form action="https://ycce.edu" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other"> <label for="other">Other</label><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="phone">Phone (10 digits):</label><br>
+                <input type="tel" id="phone" name="phone" pattern="\d{10}" required><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+
+                <label for="course">Course:</label><br>
+                <select id="course" name="course" required>
+                    <option value="">-- Select --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ece">Electronics</option>
+                </select><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="confirm">Confirm Password:</label><br>
+                <input type="password" id="confirm" name="confirm" required><br><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </fieldset>
+
+            <script>
+                function validateForm() {
+                    const name = document.getElementById('name').value.trim();
+                    if (!/^[A-Za-z\s]{3,}$/.test(name)) {
+                        alert('Enter a valid name (minimum 3 letters).');
+                        return false;
+                    }
+
+                    if (!document.querySelector('input[name="gender"]:checked')) {
+                        alert('Please select your gender.');
+                        return false;
+                    }
+
+                    const email = document.getElementById('email').value.trim();
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                        alert('Enter a valid email address.');
+                        return false;
+                    }
+
+                    const phone = document.getElementById('phone').value.trim();
+                    if (!/^\d{10}$/.test(phone)) {
+                        alert('Enter a 10-digit phone number.');
+                        return false;
+                    }
+
+                    const dob = document.getElementById('dob').value;
+                    if (!dob) {
+                        alert('Enter your date of birth.');
+                        return false;
+                    }
+                    const age = (new Date() - new Date(dob)) / (365.25 * 24 * 60 * 60 * 1000);
+                    if (age < 17) {
+                        alert('You must be at least 17 years old.');
+                        return false;
+                    }
+
+                    const course = document.getElementById('course').value;
+                    if (!course) {
+                        alert('Please select a course.');
+                        return false;
+                    }
+
+                    const pw = document.getElementById('password').value;
+                    const cpw = document.getElementById('confirm').value;
+                    if (pw.length < 6) {
+                        alert('Password must be at least 6 characters long.');
+                        return false;
+                    }
+                    if (pw !== cpw) {
+                        alert('Passwords do not match.');
+                        return false;
+                    }
+
+                    return true;
+                }
+            </script>
